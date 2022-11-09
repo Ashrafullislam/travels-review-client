@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import banner1 from '../../../../TravelImage/Banner/banner1.jpg'
 import banner2 from '../../../../TravelImage/Banner/banner2.jpg'
 import banner3 from '../../../../TravelImage/Banner/banner3.jpg'
 import banner4 from '../../../../TravelImage/Banner/banner4.jpg'
 import banner5 from '../../../../TravelImage/Banner/banner5.jpg'
 import './Banner.css';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 
 const Banner = () => {
+//animation 
+
     return (
 
 <div className="carousel w-full slider-height mb-14 rounded-md">
@@ -15,7 +19,7 @@ const Banner = () => {
  
   <img src={banner1} alt='banner1' className="w-full rounded-md " />
     <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 top-1/2 ">
-    <p className='text-center text-5xl text-white'> Hellow bangladesh </p>
+    <p className='text-center text-5xl text-white' data-aos="fade-left" > Hellow bangladesh </p>
     </div>
 
     <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">

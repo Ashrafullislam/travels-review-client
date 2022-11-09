@@ -2,7 +2,6 @@
 .team{
     transition: all .2s linear;
 }
-.team:hover{
-    transform:scale(1.5) 
 
-}
+
+
