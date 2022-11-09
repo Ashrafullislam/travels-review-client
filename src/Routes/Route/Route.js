@@ -19,7 +19,9 @@ const Route = () => {
                 },
 
                 {
-                    path: '/service', element: <Services > </Services>
+                    path: '/service',
+                     element: <Services > </Services> ,
+                     loader: () => fetch('http://localhost:5000/service')
                 },
                 {
                     path: '/review' , element: <Review > </Review>

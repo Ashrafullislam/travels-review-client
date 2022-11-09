@@ -28,7 +28,7 @@ console.log(service)
     <p className=''> {discription.slice(0,50)} </p>
     <div className="card-actions justify-end">
     <Link >  <button className="btn btn-outline btn-primary"> Services </button> </Link>
-     <Link > <button className="btn btn-outline btn-primary"> See all </button>  </Link>  
+     <Link to='/service' > <button className="btn btn-outline btn-primary"> See all </button>  </Link>  
 
     </div>
   </div>
