@@ -1,0 +1,21 @@
+button.slick-arrow.slick-next {
+    background: black;
+    color: gold;
+}
+button.slick-arrow.slick-prev.slick-disabled {
+   
+    color: white!important;
+    background:gray;
+    
+    
+}
+.multi-carousel{
+    width: 30vw;
+    height: 40vh;
+    
+}
+.multi-carousel-image{
+    width: 90%;
+    height: 100%;
+    
+}

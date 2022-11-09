@@ -18,7 +18,7 @@ const [services, setServices ] = useState([])
     return (
         <div className='mx-auto' data-aos='zoom-in' >
               <h3 className='text-4xl text-center my-10 font-bold' data-aos="fade-left" > See my Best Services With Review  </h3>
-            <div className='grid lg:grid-cols-2  gap-6 ' >
+            <div className='grid lg:grid-cols-2  gap-16 ' >
           
             {
                 services.map(service => <ServiceCard key={service._id} service = {service} > </ServiceCard> )

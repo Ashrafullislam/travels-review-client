@@ -4,7 +4,7 @@ import logo from '../../../TravelImage/Logo/travel_logo.png';
 const Footer = () => {
  return (
     <div>
-     <footer className="footer p-10 bg-slate-800 text-base-content text-lime-50">
+     <footer className="footer p-16 bg-slate-800 text-base-content text-lime-50">
   <div>
     <img style={{width:'60px', height:'50px' ,  borderRadius:'10px'}} src= {logo} alt=' logo ' /> 
     <p> Travels Zone <br/>Providing reliable tech since 1992</p>
