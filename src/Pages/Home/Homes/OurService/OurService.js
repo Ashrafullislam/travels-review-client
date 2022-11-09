@@ -10,7 +10,7 @@ const [services, setServices ] = useState([])
     },[])
     return (
         <div className='mx-auto'>
-              <h3 className='text-4xl text-center my-6 font-bold'> See my Best Services With Review {services.length}  </h3>
+              <h3 className='text-4xl text-center my-10 font-bold'> See my Best Services With Review {services.length}  </h3>
             <div className='grid lg:grid-cols-2  gap-6   '>
           
             {
