@@ -12,7 +12,7 @@ console.log(service)
   Aos.init({duration: 2000})
  },[])
     return (
-        <div className='mx-auto ' data-aos="fade-left" >
+        <div className='mx-auto ' data-aos="zoom-out" >
      <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img src= {photoURL} alt="Shoes" /></figure>
   <div className="card-body">
