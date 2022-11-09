@@ -1,26 +1,27 @@
 import React from 'react';
+import logo from '../../../TravelImage/Logo/travel_logo.png';
 
 const Footer = () => {
  return (
     <div>
      <footer className="footer p-10 bg-slate-800 text-base-content text-lime-50">
   <div>
-    
-    <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
+    <img style={{width:'60px', height:'50px' ,  borderRadius:'10px'}} src= {logo} alt=' logo ' /> 
+    <p> Travels Zone <br/>Providing reliable tech since 1992</p>
   </div> 
   <div>
     <span className="footer-title">Services</span> 
-    <a href = " / " className="link link-hover">Branding</a> 
-    <a href = " / " className="link link-hover">Design</a> 
-    <a href = " / " className="link link-hover">Marketing</a> 
-    <a href = " / " className="link link-hover">Advertisement</a>
+    <a href = " / " className="link link-hover"> Booking Hotel </a> 
+    <a href = " / " className="link link-hover"> Air Ticket  </a> 
+    <a href = " / " className="link link-hover">  Sheep Ticket </a> 
+    <a href = " / " className="link link-hover"> Awesome Bus  </a>
   </div> 
   <div>
-    <span className="footer-title">Company</span> 
-    <a href = " / " className="link link-hover">About us</a> 
-    <a href = " / " className="link link-hover">Contact</a> 
-    <a href = " / " className="link link-hover">Jobs</a> 
-    <a href = " / " className="link link-hover">Press kit</a>
+    <span className="footer-title"> Our Pages </span> 
+    <a href = " / " className="link link-hover"> Home </a> 
+    <a href = " / " className="link link-hover"> Service  </a> 
+    <a href = " / " className="link link-hover"> Review</a> 
+    <a href = " / " className="link link-hover"> Blog </a>
   </div> 
   <div>
     <span className="footer-title">Legal</span> 

@@ -1,0 +1,26 @@
+.slider-height{
+    height: 80vh;
+}
+
+ .carousel-item{
+    height:100%;
+    width: 100%;
+    background: no-repeat scroll center scroll;
+    background-size: cover;
+}
+.carousel-item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.3;
+} 
+@media screen and (min-width:300px) and (max-width:768px){
+    .slider-height{
+        height: 50vh;
+    }
+}
