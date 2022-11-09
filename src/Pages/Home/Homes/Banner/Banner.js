@@ -19,7 +19,7 @@ const Banner = () => {
  
   <img src={banner1} alt='banner1' className="w-full rounded-md " />
     <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 top-1/2 ">
-    <p className='text-center text-5xl text-white' data-aos="fade-left" > Hellow bangladesh </p>
+    <p className='text-center text-5xl text-white' data-aos="fade-left" > Wellcome My Travels Zoone </p>
     </div>
 
     <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">
@@ -32,7 +32,7 @@ const Banner = () => {
     <img src={banner2} alt='banner2' className="w-full rounded-md" /> 
 
     <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 top-1/2 ">
-    <p className='text-center text-5xl text-white'> Hellow bangladesh </p>
+    <p className='text-center text-5xl text-white'> Wonderful places ,You can travel and <br /> enjoy with nature  </p>
     </div>
     <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">
       <a href="#slide1" className="btn btn-circle bg-blue-700 mr-3">❮</a> 
@@ -44,7 +44,7 @@ const Banner = () => {
     <img src= {banner3} alt='banner3' className="w-full rounded-t-md" />
  
     <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 top-1/2 ">
-    <p className='text-center text-5xl text-white'> Hellow bangladesh </p>
+    <p className='text-center text-5xl text-white'> See Our Best Services and Booking now <br /> for visit your favourite places  </p>
     </div>
     <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">
       <a href="#slide2" className="btn btn-circle bg-blue-700 mr-3">❮</a> 
@@ -56,7 +56,7 @@ const Banner = () => {
   <img src= {banner4} alt='banner4' className="w-full rounded-md" />
 
      <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 top-1/2 ">
-     <p className='text-center text-5xl text-white'> Hellow bangladesh </p>
+     <p className='text-center text-5xl text-white'> Yey! Wonderfull Country and beautiful places. <br />  Fast come and booking on your ticket with  us  </p>
      </div>
      <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 bottom-0 ">
       <a href="#slide3" className="btn btn-circle bg-blue-700 mr-3">❮</a> 
@@ -68,7 +68,7 @@ const Banner = () => {
   <img src= {banner5} alt='banner5' className="w-full rounded-md Image" />
 
     <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 top-1/2 ">
-    <p className='text-center text-5xl text-white'> Hellow bangladesh </p>
+    <p className='text-center text-5xl text-white'> Best of Luck and visit world best Places  </p>
     </div>
     <div className="absolute flex justify-end  transform -translate-y-1/2 left-5 right-5 bottom-0">
       <a href="#slide4" className="btn btn-circle bg-blue-700 mr-3">❮</a> 
