@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const AllReview = () => {
+const AddReview = () => {
 
 
     const [user,setUser] = useState({});
@@ -33,4 +33,4 @@ const AllReview = () => {
     );
 };
 
-export default AllReview;
+export default AddReview;

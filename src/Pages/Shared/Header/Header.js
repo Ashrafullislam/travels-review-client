@@ -10,13 +10,15 @@ const Header = () => {
   const {LogOut,user} = useContext(AuthContext);
   const [smShow, setSmShow] = useState(false);
   console.log(user)
-    const menu = 
+
+  const menu = 
         <> 
         <li> <NavLink to= '/' > Home </NavLink> </li>
         <li> <NavLink to= '/service' > Service  </NavLink> </li> 
-        <li> <NavLink to= '/review' > Review   </NavLink> </li> 
-        <li> <NavLink to= '/blog' > Blog   </NavLink> </li> 
+        <li> <NavLink to= '/blog' > Blog   </NavLink> </li>
+      
         </>
+
     
     return (
         <div className="navbar bg-slate-800  text-lime-50 rounded-md">
@@ -27,6 +29,16 @@ const Header = () => {
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-600 rounded-box w-52">
               {menu}
+              {
+                user?
+                <div className='flex items-center'>
+              <li >  <NavLink className='' to= '/my-reviews' > My reviews   </NavLink>  </li>
+              <li>  <NavLink to= "/add" > Add service   </NavLink></li>
+                </div> 
+                :
+                <>
+                </>
+              }
             </ul>
           </div>
          <div>
@@ -37,17 +49,30 @@ const Header = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
-           {menu}
+            {menu}
+            {
+                user?
+                <div className='flex items-center'>
+                <NavLink className='mr-4' to= '/my-reviews' > My reviews   </NavLink> 
+                <NavLink to= "/add" > Add service   </NavLink>
+                </div> 
+                :
+                <>
+                </>
+              }
+              
           </ul>
         </div>
         <div className="navbar-end">
           
-        {user?
+           {user?
               <>
+                
                  <button  onClick={LogOut} className='mr-3 btn btn-outline btn-warning' > Log Out </button>
+                 
                  <div className='d-none d-lg-block'>
                  {user?.photoURL?
-                   <img  onClick={() => setSmShow(true)} className='user-img w-14 h-12' src= {user?.photoURL}
+                   <img  onClick={() => setSmShow(true)} className='user-img w-14 h-14 rounded-full' src= {user?.photoURL}
                   title = {user.displayName} alt=''  />
                    :
                    <FaUser  onClick={() => setSmShow(true)} className='user-icon text-light mr-2' />

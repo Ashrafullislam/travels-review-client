@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
+import {ToastContainer, toast} from 'react-toastify';
+
 
 const PrivetRoute = ({children}) => {
     const location  = useLocation()
@@ -10,10 +12,12 @@ const PrivetRoute = ({children}) => {
     }
   
     if(!user){
+       
         return <Navigate to= '/login' state={{ from: location }} replace > </Navigate>
-
+      
     }
-    return children ;
+    return  children ;
+
 
 };
 
