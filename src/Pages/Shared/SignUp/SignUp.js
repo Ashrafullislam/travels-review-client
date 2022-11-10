@@ -61,27 +61,27 @@ const SignUp = () => {
       .catch (err => {
         const error = err.message;
         console.log (error, ' error');
-        
         setError(error)
+        form.reset()
       });
 
 
-    fetch (`http://localhost:5000/users`, {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify (user),
-    })
-      .then (res => res.json ())
-      .then (data => {
-        if (data.acknowledged) {
-          alert ('User added successfully ');
-          event.target.reset ();
-        }
-        console.log (data, 'data in client site ');
-      })
-      .catch (error => console.log (error));
+//     fetch (`http://localhost:5000/users`, {
+//       method: 'POST',
+//       headers: {
+//         'Content-type': 'application/json',
+//       },
+//       body: JSON.stringify (user),
+//     })
+//       .then (res => res.json ())
+//       .then (data => {
+//         if (data.acknowledged) {
+//           alert ('User added successfully ');
+//           event.target.reset ();
+//         }
+//         console.log (data, 'data in client site ');
+//       })
+//       .catch (error => console.log (error));
   };
 
   return (
