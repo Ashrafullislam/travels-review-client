@@ -56,6 +56,9 @@ const SignUp = () => {
                  <input type="submit" value="Submit " className='text-md text-white  btn btn-outline btn-warning' />
                  <br  />
                  <span className='text-lg text-white '> You have already an account ?  </span> <Link to='/login' className='text-orange-400' > Log  in now  </Link>
+                 <br  />  <br  />
+                 <button className="btn btn-sm bg-blue-700 text-lime-100 border-orange-300 "> Signup by google  </button>
+
              </form>
         </div>
     );

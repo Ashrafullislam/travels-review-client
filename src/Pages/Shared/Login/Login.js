@@ -33,7 +33,11 @@ const Login = () => {
                  <input type="submit" value="Log in " className='text-md text-white  btn btn-outline btn-warning' />
                  <br  />
 
-                 <span className='text-lg text-white'> You have no account ?   <Link className='text-orange-300' to= '/signup' > Sign Up here   </Link>  </span>
+                 <span className='text-lg text-white'> You have no account ?   <Link className='text-orange-300' to= '/signup' > Sign Up here   </Link>  </span> 
+                 <br /> <br  />
+
+                 <button className="btn btn-sm bg-blue-700 text-lime-100 border-orange-300 "> Login by google  </button>
+
              </form>
         </div>
     );
