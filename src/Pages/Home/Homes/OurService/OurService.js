@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'
 const OurService = () => {
 const [services, setServices ] = useState([])
     useEffect(()=> {
-        fetch('http://localhost:5000/service')
+        fetch('https://travelzone.vercel.app/service')
         .then(res  => res.json())
         .then(data => setServices(data))
     },[])

@@ -9,7 +9,7 @@ import { FaUser } from 'react-icons/fa';
 const Header = () => {
   const {LogOut,user} = useContext(AuthContext);
   const [smShow, setSmShow] = useState(false);
-  
+  console.log(user)
     const menu = 
         <> 
         <li> <NavLink to= '/' > Home </NavLink> </li>
@@ -47,7 +47,7 @@ const Header = () => {
                  <button  onClick={LogOut} className='mr-3 btn btn-outline btn-warning' > Log Out </button>
                  <div className='d-none d-lg-block'>
                  {user?.photoURL?
-                   <img  onClick={() => setSmShow(true)} className='user-img' src= {user?.photoURL}
+                   <img  onClick={() => setSmShow(true)} className='user-img w-14 h-12' src= {user?.photoURL}
                   title = {user.displayName} alt=''  />
                    :
                    <FaUser  onClick={() => setSmShow(true)} className='user-icon text-light mr-2' />

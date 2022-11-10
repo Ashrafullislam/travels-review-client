@@ -23,13 +23,13 @@ const Route = () => {
                 {
                     path: '/service',
                      element: <Services > </Services> ,
-                     loader: () => fetch('http://localhost:5000/service')
+                     loader: () => fetch('https://travelzone.vercel.app/service')
                 },
                 {
                     path: '/service-details/:id',
                     element: <ServiceDetails > </ServiceDetails>,
                     loader:({params}) => {
-                        return fetch(`http://localhost:5000/service-details/${params.id}`)
+                        return fetch(`https://travelzone.vercel.app/service-details/${params.id}`)
                     }
                 },
                 {
