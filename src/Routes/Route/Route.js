@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from '../../Main/Main';
 import Blog from '../../Pages/Blog/Blog';
 import Home from '../../Pages/Home/Home';
+import AllReview from '../../Pages/Home/Homes/OurService/ServiceCard/ServiceDetails/AllReview/AllReview';
 import ServiceDetails from '../../Pages/Home/Homes/OurService/ServiceCard/ServiceDetails/ServiceDetails';
 import Review from '../../Pages/Review/Review';
 import Services from '../../Pages/Services/Services';
@@ -43,6 +44,9 @@ const Route = () => {
                 }, 
                 {
                     path: '/signup' , element: <SignUp > </SignUp>
+                },
+                {
+                    path: '/allreview', element: <AllReview > </AllReview>
                 },
                 {
                     path: '*' , element: <div> 404 Routes not found  </div>

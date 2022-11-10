@@ -27,17 +27,19 @@ const ServiceCard = ({service}) => {
     {
       discription.length > 50 ? 
       <> {discription.slice(0,50)+'.....'} 
-          <Link to= {`/service-details/${_id}`} >  <button className="btn btn-outline btn-primary"> View Details </button> </Link>
+          <div className='flex justify-end'>
+          <Link to= {`/service-details/${_id}`} >  <button className="btn btn-outline btn-primary mr-3"> View Details </button> </Link>  
+          <Link to='/service' > <button className="btn btn-outline btn-primary"> See all </button>  </Link>  
+
+          </div>
+        
 
        </>
       :
       <p> {discription} </p>
     }
-    <p className=''> {discription.slice(0,50)} </p>
-    <div className="card-actions justify-end">
-     <Link to='/service' > <button className="btn btn-outline btn-primary"> See all </button>  </Link>  
-
-    </div>
+   
+    
   </div>
    </div>
             
