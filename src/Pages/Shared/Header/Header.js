@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import logo from '../../../TravelImage/Logo/travel_logo.png';
+import { FaUser } from 'react-icons/fa';
+
+
 
 const Header = () => {
+  const {LogOut,user} = useContext(AuthContext);
+  const [smShow, setSmShow] = useState(false);
+  
     const menu = 
         <> 
         <li> <NavLink to= '/' > Home </NavLink> </li>
@@ -12,7 +19,7 @@ const Header = () => {
         </>
     
     return (
-        <div className="navbar bg-slate-800  text-lime-50 rounded-md ">
+        <div className="navbar bg-slate-800  text-lime-50 rounded-md">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -34,8 +41,28 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-            <Link to='/login' >  <button className="btn btn-outline btn-warning mr-2"> Log in </button> </Link>
-            <Link to='/signup' >  <button className="btn btn-outline btn-warning"> Sign Up  </button> </Link>
+          
+        {user?
+              <>
+                 <button  onClick={LogOut} className='mr-3 btn btn-outline btn-warning' > Log Out </button>
+                 <div className='d-none d-lg-block'>
+                 {user?.photoURL?
+                   <img  onClick={() => setSmShow(true)} className='user-img' src= {user?.photoURL}
+                  title = {user.displayName} alt=''  />
+                   :
+                   <FaUser  onClick={() => setSmShow(true)} className='user-icon text-light mr-2' />
+                 }     
+                  </div> 
+               </>
+                  :  
+                <>
+               <Link to={'/login'} > <button  className=' btn btn-outline btn-warning mr-2' > Log in </button> </Link>
+               <Link to={'/signup'}> <button  className='btn btn-outline btn-warning' > Sign up </button>
+              </Link> 
+              </>
+
+            }
+
         </div>
       </div>
     );

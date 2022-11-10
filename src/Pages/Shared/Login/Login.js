@@ -1,17 +1,24 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../Routes/PrivetRoutes/AuthContext';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
+
 
  const Login = () => {
-  const {LogInUser,SignUpGoogle} = useContext(AuthContext)
+  const {LogInUser,SignUpGoogle,LogOut } = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
+
     const [findUser,setFindUser] = useState(null);
     const [error, setError ] = useState(null) ;
 
-    // set user on the state and its type will be object 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
+
+    // set user on the state and its type will be object or database 
     const [user,setUser] = useState({});
 
     const handleValueOnBlur = (event) => { 
@@ -23,6 +30,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
     }
 
+// hanle login form 
     const handleForm = (event) => {
         event.preventDefault()
         setError(null)
@@ -44,6 +52,7 @@ import 'react-toastify/dist/ReactToastify.css';
                 theme: 'light',
               });
               setError(null)
+              navigate(from, { replace: true }); 
             form.reset()
         })
         .catch(err => {
@@ -78,7 +87,7 @@ import 'react-toastify/dist/ReactToastify.css';
                  }
                  <br  />
                  <button onClick={GoogleSignUp} className="btn btn-sm bg-blue-700 text-lime-100 border-orange-300 "> Login by google  </button>
-
+                 
              </form>
 
              <ToastContainer

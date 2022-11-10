@@ -8,6 +8,7 @@ import Review from '../../Pages/Review/Review';
 import Services from '../../Pages/Services/Services';
 import Login from '../../Pages/Shared/Login/Login';
 import SignUp from '../../Pages/Shared/SignUp/SignUp';
+import PrivetRoute from '../PrivetRoutes/PrivetRoute';
 
 const Route = () => {
     const router = createBrowserRouter([
@@ -32,7 +33,7 @@ const Route = () => {
                     }
                 },
                 {
-                    path: '/review' , element: <Review > </Review>
+                    path: '/review' , element: <PrivetRoute > <Review > </Review>  </PrivetRoute>
                 },
                 {
                     path: '/blog' , element: <Blog > </Blog>
