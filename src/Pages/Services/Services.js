@@ -8,7 +8,7 @@ const Services = () => {
 
     return (
         <div className='mb-20 mt-10'>
-           <div className='mb-10'>
+           <div className='mb-10' data-aos="fade-right" >
            <h3 className='text-4xl  font-semibold text-center'> My  Services :  </h3>
             <p className='text-center text-2xl font-semibold my-2'> We are providing best Service and doing work very fast  </p>
            </div>

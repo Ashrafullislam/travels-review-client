@@ -5,9 +5,8 @@ import 'aos/dist/aos.css'
 
 const ServiceCard = ({service}) => {
 
- const {title, photoURL, price,days ,discription
- } = service ;
-console.log(service)
+ const {title, photoURL, price,days ,discription,_id} = service ;
+ // animation card 
  useEffect(()=> {
   Aos.init({duration: 2000})
  },[])
@@ -25,9 +24,17 @@ console.log(service)
     </div>
    
     <p className='font-semibold '> If you want to visit the beautiful place , please booking now</p>
+    {
+      discription.length > 50 ? 
+      <> {discription.slice(0,50)+'.....'} 
+          <Link to= {`/service-details/${_id}`} >  <button className="btn btn-outline btn-primary"> View Details </button> </Link>
+
+       </>
+      :
+      <p> {discription} </p>
+    }
     <p className=''> {discription.slice(0,50)} </p>
     <div className="card-actions justify-end">
-    <Link >  <button className="btn btn-outline btn-primary"> Services </button> </Link>
      <Link to='/service' > <button className="btn btn-outline btn-primary"> See all </button>  </Link>  
 
     </div>
