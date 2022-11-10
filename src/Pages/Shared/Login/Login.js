@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Routes/PrivetRoutes/AuthContext';
 
 
 const Login = () => {
+    const authInfo = useContext(AuthContext)
+    console.log(authInfo.userInfo.displayName)
     // set user on the state and its type will be object 
     const [user,setUser] = useState({});
     console.log(user)

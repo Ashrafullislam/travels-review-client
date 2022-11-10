@@ -8,9 +8,10 @@ import Context from './Routes/PrivetRoutes/AuthContext';
 const root = ReactDOM.createRoot (document.getElementById ('root'));
 root.render (
   <React.StrictMode>
-    <Context>
-      <App />
-    </Context>
+  <Context > 
+     <App />
+  </Context>
+   
   </React.StrictMode>
 );
 
