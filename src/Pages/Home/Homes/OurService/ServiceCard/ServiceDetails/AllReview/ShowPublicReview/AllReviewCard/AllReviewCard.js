@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { FaUser } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../../../../../../AuthProvider/AuthProvider';
 
-const AllReviewCard = ({review}) => {
+const AllReviewCard = ({review,handleDelete}) => {
     const {user} = useContext(AuthContext)
  const {clientName,photoURL,message,price ,serviceName
-,serviceImg } = review ;
+,serviceImg,_id } = review ;
  console.log(review)
     return (
      <div>      
@@ -24,7 +25,7 @@ const AllReviewCard = ({review}) => {
         :
         <FaUser className='w-16 h-16 rounded-full' /> 
      }
-     
+      <button  onClick={()=>handleDelete(_id)} className='btn btn-outline btn-primary ' > Delete  </button> 
   </div>
 </div>
       
