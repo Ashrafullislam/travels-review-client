@@ -1,10 +1,10 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from '../../Main/Main';
+import AddReview from '../../Pages/AddReview/AddReview';
 import AddService from '../../Pages/AddService/AddService';
 import Blog from '../../Pages/Blog/Blog';
 import Home from '../../Pages/Home/Home';
-import AddReview from '../../Pages/Home/Homes/OurService/ServiceCard/ServiceDetails/AllReview/AddReview';
 import ServiceDetails from '../../Pages/Home/Homes/OurService/ServiceCard/ServiceDetails/ServiceDetails';
 import MyReviews from '../../Pages/My-Reviews/MyReviews';
 import Services from '../../Pages/Services/Services';
@@ -25,7 +25,7 @@ const Route = () => {
                 {
                     path: '/service',
                      element: <Services > </Services> ,
-                     loader: () => fetch('http://localhost:5000/services')
+                     loader: () => fetch('http://localhost:5000/allservices')
                 },
                 {
                     path: '/service/:id',
@@ -34,7 +34,6 @@ const Route = () => {
                         return fetch(`http://localhost:5000/service/${params.id}`)
                     }
                 },
-                
                 
                 {
                     path: '/blog' , element: <Blog > </Blog>
@@ -45,15 +44,19 @@ const Route = () => {
                 {
                     path: '/signup' , element: <SignUp > </SignUp>
                 },
-                {
-                    path: '/add-review', element: <PrivetRoute > <AddReview > </AddReview></PrivetRoute>
-                },
+              
+               {
+                    path: '/addreview/:id',
+                    loader : ({params}) => fetch(`http://localhost:5000/service_review/${params.id}`),
+                    element : <PrivetRoute > <AddReview > </AddReview> </PrivetRoute> 
+               },
                 {
                     path: '/add', element: <PrivetRoute > <AddService > </AddService> </PrivetRoute>
                 },
                 {
                     path: '/my-reviews' , element: <PrivetRoute >  <MyReviews > </MyReviews> </PrivetRoute>
                 },
+               
                 {
                     path: '*' , element: <div> 404 Routes not found  </div>
                 }

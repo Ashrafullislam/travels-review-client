@@ -38,57 +38,41 @@ const SignUp = () => {
     const password = form.password.value;
     const confirm = form.confirm.value;
     
+    SignUpUser (email, password)
+    .then (result => {
+  
+      toast.success (' Succesfully Created Account ', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
+      setError(null)
+      form.reset()
+    })
+    .catch (err => {
+      const error = err.message;
+      console.log (error, ' error');
+      setError(error)
+      form.reset()
+    });
     console.log (email, password);
     if (password !== confirm) {
       alert ('Password and Confirm password not match ');
       return;
     }
-    SignUpUser (email, password)
-      .then (result => {
-
-        toast.success (' Succesfully Created Account ', {
-          position: 'top-right',
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'light',
-        });
-        setError(null)
-        form.reset()
-      })
-      .catch (err => {
-        const error = err.message;
-        console.log (error, ' error');
-        setError(error)
-        form.reset()
-      });
-
-
-//     fetch (`http://localhost:5000/users`, {
-//       method: 'POST',
-//       headers: {
-//         'Content-type': 'application/json',
-//       },
-//       body: JSON.stringify (user),
-//     })
-//       .then (res => res.json ())
-//       .then (data => {
-//         if (data.acknowledged) {
-//           alert ('User added successfully ');
-//           event.target.reset ();
-//         }
-//         console.log (data, 'data in client site ');
-//       })
-//       .catch (error => console.log (error));
-  };
-
+  }
+ 
   return (
+    <div>
+      
     <div className="Signup w-4/5 bg-sky-800 p-8 mx-auto my-10 rounded-md">
       <h3 className="text-4xl font-semibold text-white py-6">
-        {' '}Please Sign Up{' '}
+        Please Sign Up
       </h3>
       <form onSubmit={handleFormSignUp}>
         <input
@@ -134,9 +118,9 @@ const SignUp = () => {
         />
         <br />
         <span className="text-lg text-white ">
-          {' '}You have already an account ?{' '}
+          You have already an account ?
         </span>
-        {' '}
+        
         <Link to="/login" className="text-orange-400"> Log  in now </Link>
         <br />  <br />
         {
@@ -147,7 +131,7 @@ const SignUp = () => {
           onClick={GoogleSignUp}
           className="btn btn-sm bg-blue-700 text-lime-100 border-orange-300 "
         >
-          {' '}Signup by google{' '}
+          Signup by google
         </button>
 
       </form>
@@ -167,6 +151,7 @@ const SignUp = () => {
       {/* Same as */}
       <ToastContainer />
 
+    </div> 
     </div>
   );
 };

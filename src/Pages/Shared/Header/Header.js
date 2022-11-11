@@ -9,7 +9,6 @@ import { FaUser } from 'react-icons/fa';
 const Header = () => {
   const {LogOut,user} = useContext(AuthContext);
   const [smShow, setSmShow] = useState(false);
-  console.log(user)
 
   const menu = 
         <> 

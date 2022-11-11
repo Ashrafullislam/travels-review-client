@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import UseTitle from '../../Title/UseTitle';
 import ServiceCard from '../Home/Homes/OurService/ServiceCard/ServiceCard';
-import ShowPublicReview from '../Home/Homes/OurService/ServiceCard/ServiceDetails/AllReview/ShowPublicReview/ShowPublicReview';
 
 
 const Services = () => {

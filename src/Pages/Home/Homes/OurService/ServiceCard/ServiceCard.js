@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServiceCard = ({service}) => {
 
@@ -11,9 +13,16 @@ const ServiceCard = ({service}) => {
   Aos.init({duration: 2000})
  },[])
     return (
-        <div className='mx-auto ' data-aos="zoom-out" >
+      
+      <div className='mx-auto ' data-aos="zoom-out" >
      <div className="card w-96 bg-base-100 shadow-xl">
-  <figure><img src= {photoURL} alt="Shoes" /></figure>
+    <figure>  
+          <PhotoProvider>
+               <PhotoView src={photoURL}>
+                <img className='' src={photoURL} alt="" />
+                    </PhotoView>
+                </PhotoProvider>      
+      </figure>
   <div className="card-body">
     <h2 className="card-title">
       {title}
@@ -28,7 +37,7 @@ const ServiceCard = ({service}) => {
       discription.length > 50 ? 
       <> {discription.slice(0,50)+'.....'} 
           <div className='flex justify-end'>
-          <Link to= {`/service-details/${_id}`} >  <button className="btn btn-outline btn-primary mr-3"> View Details </button> </Link>  
+          <Link to= {`/service/${_id}`} >  <button className="btn btn-outline btn-primary mr-3"> View Details </button> </Link>  
           <Link to='/service' > <button className="btn btn-outline btn-primary"> See all </button>  </Link>  
 
           </div>

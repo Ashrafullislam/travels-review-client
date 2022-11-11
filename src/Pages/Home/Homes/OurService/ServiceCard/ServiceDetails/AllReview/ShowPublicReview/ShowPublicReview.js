@@ -1,11 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import AllReviewCard from './AllReviewCard/AllReviewCard';
 
 const ShowPublicReview = () => {
-    return (
-        <div>
-            <h1 className='text-3xl text-center text-semibold ' > See our Client Review  </h1>
-        </div>
-    );
+  const [reviews, setReviews] = useState ([]);
+
+  console.log (reviews);
+  // load all reviews from database
+  useEffect (() => {
+    fetch ('http://localhost:5000/reviews')
+      .then (res => res.json ())
+      .then (data => setReviews (data));
+  }, []);
+
+  return (
+    <div>
+      <h1 className="text-4xl text-center font-semibold">
+        {' '}What our client say{' '}
+        
+      </h1>
+      <div className='grid grid-cols-3 gap-16'>
+      {
+            reviews.map(review => <AllReviewCard key={review._id} review = {review} > </AllReviewCard>)
+        }
+      </div>
+        
+    </div>
+  );
 };
 
 export default ShowPublicReview;
