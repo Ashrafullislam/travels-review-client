@@ -6,12 +6,13 @@ import './SignUp.css';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {FaGoogle, IconName} from 'react-icons/fa';
+import UseTitle from '../../../Title/UseTitle';
 
 const SignUp = () => {
   const {SignUpUser, SignUpGoogle} = useContext (AuthContext);
   const [error,  setError] = useState(null)
   const provider = new GoogleAuthProvider ();
-
+   UseTitle("Sign up")
   // set user on the state and its type will be object
   const [user, setUser] = useState ({});
   const handleValueOnBlur = event => {

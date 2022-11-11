@@ -1,6 +1,8 @@
 import React from 'react';
+import UseTitle from '../../Title/UseTitle';
 
 const Blog = () => {
+  UseTitle("Blog")
   return (
     <div className='bg-gray-100 p-10  mb-20 rounded-md' >
       <h3 className='text-4xl text-center text-semibold my-12'> You Can See Your Question Answer </h3>

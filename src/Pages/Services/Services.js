@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import UseTitle from '../../Title/UseTitle';
 import ServiceCard from '../Home/Homes/OurService/ServiceCard/ServiceCard';
 import ShowPublicReview from '../Home/Homes/OurService/ServiceCard/ServiceDetails/AllReview/ShowPublicReview/ShowPublicReview';
 
 
 const Services = () => {
     const services = useLoaderData()
+    
+    UseTitle("Services")
 
     return (
         <div className='mb-20 mt-10'>
@@ -18,10 +21,7 @@ const Services = () => {
                 services.map(service => <ServiceCard key={service._id} service = {service} > </ServiceCard> )
             }
             </div>
-            <div className='my-10'>
-                <ShowPublicReview > </ShowPublicReview>
-                   <Link to='/add-review' className='mt-5' > <button className="btn btn-outline btn-primary"> Please Add review  </button>  </Link>  
-            </div>
+          
             
         </div>
     );

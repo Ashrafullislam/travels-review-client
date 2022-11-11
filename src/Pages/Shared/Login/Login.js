@@ -5,12 +5,13 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import UseTitle from '../../../Title/UseTitle';
 
 
  const Login = () => {
   const {LogInUser,SignUpGoogle,LogOut } = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
-
+     UseTitle('Login') 
     const [findUser,setFindUser] = useState(null);
     const [error, setError ] = useState(null) ;
 
