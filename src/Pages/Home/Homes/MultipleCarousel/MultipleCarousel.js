@@ -34,7 +34,7 @@ export default class AutoPlayMethods extends Component {
       };
       return (
         <div  className="my-20">
-          <h2 className="text-4xl my-10 text-center font-semibold" data-aos="flip-right"> Wonderful places in many contries </h2>
+          <h2 className="text-4xl my-10 text-center font-semibold" data-aos="flip-right"> Wonderful places in many countries </h2>
           <Slider ref={slider => (this.slider = slider)} {...settings}>
             <div className = " multi-carousel">
              <img className = " multi-carousel-image" src={place1} alt ='' />

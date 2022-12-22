@@ -8,7 +8,7 @@ const ShowPublicReview = () => {
   console.log (reviews);
   // load all reviews from database
   useEffect (() => {
-    fetch ('http://localhost:5000/reviews')
+    fetch ('https://travelzone.vercel.app/reviews')
       .then (res => res.json ())
       .then (data => setReviews (data));
   }, []);
@@ -16,7 +16,7 @@ const ShowPublicReview = () => {
   const handleDelete = id => {
     const proceed = window.confirm('you want to delete this review')
     if(proceed){
-        fetch(`http://localhost:5000/reviews/${id}`, {
+        fetch(`https://travelzone.vercel.app/reviews/${id}`, {
             method: "DELETE"
         })
         .then(res => res.json())

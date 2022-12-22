@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import logo from '../../../TravelImage/Logo/travel_logo.png';
 import { FaUser } from 'react-icons/fa';
+import './Header.css';
 
 
 
@@ -20,7 +21,7 @@ const Header = () => {
 
     
     return (
-        <div className="navbar bg-slate-800  text-lime-50 rounded-md">
+        <div className="navbar nav-bg text-lime-50  ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -67,7 +68,7 @@ const Header = () => {
            {user?
               <>
                 
-                 <button  onClick={LogOut} className='mr-3 btn btn-outline btn-warning' > Log Out </button>
+                 <button  onClick={LogOut} className='mr-3 btn btn-outline btn-info' > Log Out </button>
                  
                  <div className='d-none d-lg-block'>
                  {user?.photoURL?
@@ -80,9 +81,8 @@ const Header = () => {
                </>
                   :  
                 <>
-               <Link to={'/login'} > <button  className=' btn btn-outline btn-warning mr-2' > Log in </button> </Link>
-               <Link to={'/signup'}> <button  className='btn btn-outline btn-warning' > Sign up </button>
-              </Link> 
+               <Link to={'/login'} > <button  className=' btn btn-outline btn-info mr-2' > Log in </button> </Link>
+             
               </>
 
             }

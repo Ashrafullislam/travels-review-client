@@ -25,7 +25,7 @@ const AddReview = () => {
          photoURL :userPhoto ,
          serviceImg: photoURL , 
        }
-       fetch ('http://localhost:5000/reviews', {
+       fetch ('https://travelzone.vercel.app/reviews', {
          method: "POST",
          headers: {
            'content-type': 'application/json'
@@ -44,13 +44,6 @@ const AddReview = () => {
             <div className="my-6">
        <div className=' '> 
 
-         {/* The button to open modal  */}
-      <label htmlFor="my-modal-4" className="btn">open modal</label>
-
-      {/* Put this part before </body> tag  */}
-      <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-      <label htmlFor="my-modal-4" className="modal cursor-pointer">
-        <label className="modal-box relative" htmlFor="">
             
        <h2 className='text-3xl font-semibold my-3'> {title} </h2>
             <form onSubmit={handleFormReview} className = 'bg-slate-200 p-10 rounded-md'> 
@@ -69,9 +62,7 @@ const AddReview = () => {
             <br  />
         </form>
         
-        </label>
-      </label>
-     
+    
 
           </div> 
         </div>

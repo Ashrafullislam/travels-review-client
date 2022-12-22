@@ -1,0 +1,7 @@
+.nav-bg{
+    background-color: rgb(2, 2, 58) ;
+    z-index: 1;
+}
+.active{
+background:rgba(3, 3, 126, 0.808);
+}

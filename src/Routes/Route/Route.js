@@ -25,16 +25,16 @@ const Route = () => {
                 {
                     path: '/service',
                      element: <Services > </Services> ,
-                     loader: () => fetch('http://localhost:5000/allservices')
+                     loader: () => fetch('https://travelzone.vercel.app/allservices')
                 },
                 {
                     path: '/service/:id',
                     element: <ServiceDetails > </ServiceDetails>,
                     loader:({params}) => {
-                        return fetch(`http://localhost:5000/service/${params.id}`)
+                        return fetch(`https://travelzone.vercel.app/service/${params.id}`)
                     }
                 },
-                
+
                 {
                     path: '/blog' , element: <Blog > </Blog>
                 },
@@ -47,7 +47,7 @@ const Route = () => {
               
                {
                     path: '/addreview/:id',
-                    loader : ({params}) => fetch(`http://localhost:5000/service_review/${params.id}`),
+                    loader : ({params}) => fetch(`https://travelzone.vercel.app/service_review/${params.id}`),
                     element : <PrivetRoute > <AddReview > </AddReview> </PrivetRoute> 
                },
                 {

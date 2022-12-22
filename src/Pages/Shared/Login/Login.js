@@ -68,8 +68,8 @@ import UseTitle from '../../../Title/UseTitle';
 
 
     return (
-        <div className='login  w-4/5 bg-sky-800 p-8 mx-auto my-10 rounded-md'>
-            <h3 className='text-4xl text-white font-semibold my-4'> Please Log in  </h3> 
+        <div className='login  w-4/5 bg-slate-600 p-8 mx-auto mt-10 mb-20 rounded-md'>
+            <h3 className='lg:text-4xl text-3xl text-white font-semibold my-4'> Please Log in  </h3> 
              <form onSubmit={handleForm}> 
            
                 <input onBlur={handleValueOnBlur} type="email" name = 'email' placeholder='Enter email' required className='w-1/2 h-8 px-3 rounded-md'  />
@@ -77,16 +77,16 @@ import UseTitle from '../../../Title/UseTitle';
                 <input onBlur={handleValueOnBlur} type="password" name = 'password' placeholder='Enter password' required className='w-1/2 h-8 px-3 rounded-md'  />
                 <br /> <br />
 
-                 <input type="submit" value="Log in " className='text-md text-white  btn btn-outline btn-warning' />
+                 <input type="submit" value="Log in " className='text-md text-white  btn btn-outline btn-info' />
                  <br  />
 
                  <span className='text-lg text-white'> You have no account ?   <Link className='text-orange-300' to= '/signup' > Sign Up here   </Link>  </span> 
                  <br /> <br  />
                  {
-                    error && <span className='text-red-500'> {error} </span>
+                    error && <span className='text-red-500'> {error} </span> 
                  }
                  <br  />
-                 <button onClick={GoogleSignUp} className="btn btn-sm bg-blue-700 text-lime-100 border-orange-300 "> Login by google  </button>
+                 <button onClick={GoogleSignUp} className="btn btn-md bg-slate-900  "> Login with google  </button>
                  
              </form>
 

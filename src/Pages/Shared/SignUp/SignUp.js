@@ -70,7 +70,7 @@ const SignUp = () => {
   return (
     <div>
       
-    <div className="Signup w-4/5 bg-sky-800 p-8 mx-auto my-10 rounded-md">
+    <div className="Signup w-4/5  bg-slate-600  p-8 mx-auto my-10 rounded-md">
       <h3 className="text-4xl font-semibold text-white py-6">
         Please Sign Up
       </h3>
@@ -114,7 +114,7 @@ const SignUp = () => {
         <input
           type="submit"
           value="Submit "
-          className="text-md text-white  btn btn-outline btn-warning"
+          className="text-md text-white  btn btn-outline btn-info"
         />
         <br />
         <span className="text-lg text-white ">
@@ -129,7 +129,7 @@ const SignUp = () => {
         <br  />
         <button
           onClick={GoogleSignUp}
-          className="btn btn-sm bg-blue-700 text-lime-100 border-orange-300 "
+          className="btn btn-md bg-slate-900  "
         >
           Signup by google
         </button>

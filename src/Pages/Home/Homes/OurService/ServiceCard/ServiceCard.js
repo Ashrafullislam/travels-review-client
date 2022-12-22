@@ -12,10 +12,11 @@ const ServiceCard = ({service}) => {
  useEffect(()=> {
   Aos.init({duration: 2000})
  },[])
+ 
     return (
       
       <div className='mx-auto ' data-aos="zoom-out" >
-     <div className="card w-96 bg-base-100 shadow-xl">
+     <div className="card w-full bg-base-100 shadow-xl">
     <figure>  
           <PhotoProvider>
                <PhotoView src={photoURL}>

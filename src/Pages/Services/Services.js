@@ -12,8 +12,8 @@ const Services = () => {
     return (
         <div className='mb-20 mt-10'>
            <div className='mb-10' data-aos="fade-right" >
-           <h3 className='text-4xl  font-semibold text-center'> My  Services :  </h3>
-            <p className='text-center text-2xl font-semibold my-2'> We are providing best Service and doing work very fast  </p>
+           <h3 className='text-4xl  font-semibold text-center'> Travelling Place Samecategory :  </h3>
+            <p className='text-center text-2xl font-semibold my-2'>We provide best service travels-package at cheap rate and Wonderfull places    </p>
            </div>
             <div className='grid lg:grid-cols-2  gap-16 '>
             {
